@@ -10,6 +10,11 @@ export class Searchbar extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault()
+
+        if (this.state.query.trim() === '') {
+            alert('Введите поисковый запрос')
+            return
+        }
         this.props.onSubmit(this.state.query)
         this.setState({query: ''})
 
@@ -18,12 +23,9 @@ export class Searchbar extends Component {
         return (
             <div>
                 <header className="searchbar">
-                    <form className="form">
-                        <button type="submit"
-                            className="button"
-                            onSubmit={this.handleSubmit}>
-                        <span className="button-label">Search</span>
-                            
+                    <form className="form" onSubmit={this.handleSubmit}>
+                        <button type="submit" className="button">
+                            <span className="button-label">Search</span>
                         </button>
 
                         <input
