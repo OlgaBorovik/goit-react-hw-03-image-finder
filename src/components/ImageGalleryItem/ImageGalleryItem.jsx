@@ -1,9 +1,10 @@
 import React from "react";
+import {ImageItem, Image} from "./ImageGalleryItem.styled"
 
 export function ImageGalleryItem({webformatURL, tags}) {
     return (
-        <li className="gallery-item">
-            <img src={webformatURL} alt={tags} />
-        </li>
+        <ImageItem>
+            <Image src={webformatURL} alt={tags} />
+        </ImageItem>
     )
 }

@@ -1,17 +1,17 @@
 import React from "react";
 import { ImageGalleryItem } from "../ImageGalleryItem/ImageGalleryItem"
-import "//src/styles.css"
+import {ImageGalleryList} from './ImageGallery.styled'
+
 
 export function ImageGallery({images}) {
     return (
         <div>
-            <ul className="gallery">
+            <ImageGalleryList>
                 {
                     images.map(({ id, ...otherProps }) => (
                          <ImageGalleryItem key={id} {...otherProps} /> ))
                 }
-
-            </ul>
+            </ImageGalleryList>
         </div>
     )
 }
