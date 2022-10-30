@@ -33,7 +33,7 @@ display: inline-block;
   height: 48px;
   border: 0;
 //   color: grey;
-  background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg');
+  // background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg');
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;
@@ -45,18 +45,18 @@ display: inline-block;
     opacity: 1;
   }
 `
-export const ButtonLabel = styled.span`
-position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  overflow: hidden;
-  color: grey:
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  clip-path: inset(50%);
-  border: 0;
-`
+// export const ButtonLabel = styled.span`
+// position: absolute;
+//   width: 1px;
+//   height: 1px;
+//   padding: 0;
+//   overflow: hidden;
+//   color: grey:
+//   clip: rect(0, 0, 0, 0);
+//   white-space: nowrap;
+//   clip-path: inset(50%);
+//   border: 0;
+// `
 export const SearchFormInput = styled.input`
 display: inline-block;
   width: 100%;
@@ -71,3 +71,7 @@ display: inline-block;
   font-size: 18px;
   }
 `
+// export const ButtonIcon = styled.svg`
+// width: 16px;
+// height: 16px;
+// `

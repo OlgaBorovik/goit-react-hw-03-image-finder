@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
-import {SearchbarHeader, SearchForm, Button, ButtonLabel, SearchFormInput} from "./Searchbar.styled"
+import { SearchbarHeader, SearchForm, Button, SearchFormInput } from "./Searchbar.styled"
+import { GoSearch } from "react-icons/go";
+import { IconContext } from "react-icons"
 
 export class Searchbar extends Component {
     state = {
@@ -23,14 +25,17 @@ export class Searchbar extends Component {
     render() {
         return (
             <div>
-                <SearchbarHeader className="searchbar">
-                    <SearchForm className="form" onSubmit={this.handleSubmit}>
+                <SearchbarHeader>
+                    <SearchForm onSubmit={this.handleSubmit}>
                         <Button type="submit">
-                            <ButtonLabel>Search</ButtonLabel>
+                            <IconContext.Provider value={{ color: "inherit", size: "2em"}}>
+                                <GoSearch />
+                            </IconContext.Provider>
+                                
+                            
                         </Button>
 
                         <SearchFormInput
-                        className="input"
                         type="text"
                         autoComplete="off"
                         autoFocus
